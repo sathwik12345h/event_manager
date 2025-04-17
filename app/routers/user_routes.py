@@ -184,13 +184,13 @@ async def list_users(
     
     pagination_links = generate_pagination_links(request, skip, limit, total_users)
     
-    # Construct the final response with pagination details
+    # build the final response with pagination details
     return UserListResponse(
         items=user_responses,
         total=total_users,
         page=skip // limit + 1,
         size=len(user_responses),
-        links=pagination_links  # Ensure you have appropriate logic to create these links
+        links=pagination_links  # make you have appropriate logic to create these links
     )
 
 
